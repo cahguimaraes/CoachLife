@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentResults;
 
 namespace CoachLife.Domain.Services.Interfaces
 {
     public interface IUserService
     {
-        Task<IActionResult> GetUserAsync(int userId);
+        Task<Result> GetUserAsync(int userId);
     }
 }

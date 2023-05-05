@@ -338,3 +338,8 @@ C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\obj\Debug\net6.0\refi
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\obj\Debug\net6.0\CoachLifeTests.pdb
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\obj\Debug\net6.0\CoachLifeTests.genruntimeconfig.cache
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\obj\Debug\net6.0\ref\CoachLifeTests.dll
+C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\FluentResults.dll
+C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

@@ -1,40 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.444444444444444" branch-rate="0.166666666666667" lines-covered="32" lines-valid="72" branches-covered="1" branches-valid="6" complexity="23" version="0" timestamp="1683224651">
+<coverage line-rate="0.427272727272727" branch-rate="0.333333333333333" lines-covered="47" lines-valid="110" branches-covered="4" branches-valid="12" complexity="37" version="0" timestamp="1683306234">
   <sources>
     <source>C:\Users\User\</source>
   </sources>
   <packages>
-    <package name="CoachLife" line-rate="0.173913043478261" branch-rate="0.166666666666667" complexity="15">
+    <package name="CoachLife" line-rate="0.253164556962025" branch-rate="0.333333333333333" complexity="28">
       <classes>
-        <class name="CoachLife.Api.Controllers.UserController" filename="C:\Users\User\Documents\Labs\CoachLife\CoachLife\Api\Controllers\UserController.cs" line-rate="1" branch-rate="0.5" complexity="3">
+        <class name="CoachLife.Api.Controllers.UserController" filename="C:\Users\User\Documents\Labs\CoachLife\CoachLife\Api\Controllers\UserController.cs" line-rate="0.9" branch-rate="0.75" complexity="4">
           <methods>
-            <method name=".ctor" signature="(...)" line-rate="1" branch-rate="0.5" complexity="2">
+            <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="10" hits="2" branch="false" />
-                <line number="11" hits="2" branch="false" />
-                <line number="12" hits="2" branch="true" condition-coverage="50% (1/2)" />
-                <line number="13" hits="2" branch="false" />
+                <line number="12" hits="3" branch="false" />
+                <line number="13" hits="3" branch="false" />
+                <line number="14" hits="3" branch="true" condition-coverage="100% (2/2)" />
+                <line number="15" hits="2" branch="false" />
               </lines>
             </method>
-            <method name="GetUserAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="GetUserAsync" signature="()" line-rate="0.833333333333333" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="17" hits="1" branch="false" />
-                <line number="18" hits="1" branch="false" />
+                <line number="19" hits="1" branch="false" />
                 <line number="20" hits="1" branch="false" />
-                <line number="21" hits="1" branch="false" />
+                <line number="22" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="23" hits="0" branch="false" />
+                <line number="25" hits="1" branch="false" />
+                <line number="26" hits="1" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="10" hits="2" branch="false" />
-            <line number="11" hits="2" branch="false" />
-            <line number="12" hits="2" branch="true" condition-coverage="50% (1/2)" />
-            <line number="13" hits="2" branch="false" />
-            <line number="17" hits="1" branch="false" />
-            <line number="18" hits="1" branch="false" />
+            <line number="12" hits="3" branch="false" />
+            <line number="13" hits="3" branch="false" />
+            <line number="14" hits="3" branch="true" condition-coverage="100% (2/2)" />
+            <line number="15" hits="2" branch="false" />
+            <line number="19" hits="1" branch="false" />
             <line number="20" hits="1" branch="false" />
-            <line number="21" hits="1" branch="false" />
+            <line number="22" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="23" hits="0" branch="false" />
+            <line number="25" hits="1" branch="false" />
+            <line number="26" hits="1" branch="false" />
+          </lines>
+        </class>
+        <class name="CoachLife.Application.Extensions.ResultDto" filename="C:\Users\User\Documents\Labs\CoachLife\CoachLife\Application\Extensions\ResultDto.cs" line-rate="0.5" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_IsSuccess" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Errors" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="1" branch="false" />
+                <line number="10" hits="1" branch="false" />
+                <line number="11" hits="1" branch="false" />
+                <line number="12" hits="1" branch="false" />
+                <line number="13" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Message" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Code" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="0" branch="false" />
+                <line number="22" hits="0" branch="false" />
+                <line number="23" hits="0" branch="false" />
+                <line number="24" hits="0" branch="false" />
+                <line number="25" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="1" branch="false" />
+            <line number="7" hits="1" branch="false" />
+            <line number="9" hits="1" branch="false" />
+            <line number="10" hits="1" branch="false" />
+            <line number="11" hits="1" branch="false" />
+            <line number="12" hits="1" branch="false" />
+            <line number="13" hits="1" branch="false" />
+            <line number="17" hits="0" branch="false" />
+            <line number="19" hits="0" branch="false" />
+            <line number="21" hits="0" branch="false" />
+            <line number="22" hits="0" branch="false" />
+            <line number="23" hits="0" branch="false" />
+            <line number="24" hits="0" branch="false" />
+            <line number="25" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CoachLife.Application.Extensions.ResultDtoExtension" filename="C:\Users\User\Documents\Labs\CoachLife\CoachLife\Application\Extensions\ResultDtoExtension.cs" line-rate="0.235294117647059" branch-rate="0.25" complexity="6">
+          <methods>
+            <method name="ToResultDto" signature="(...)" line-rate="0.8" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="9" hits="1" branch="false" />
+                <line number="10" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="11" hits="1" branch="false" />
+                <line number="13" hits="0" branch="false" />
+                <line number="14" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="TransformErrors" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="0" branch="false" />
+                <line number="18" hits="0" branch="false" />
+                <line number="19" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="TransformError" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="0" branch="false" />
+                <line number="23" hits="0" branch="false" />
+                <line number="25" hits="0" branch="false" />
+                <line number="26" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="TransformErrorCode" signature="(...)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="29" hits="0" branch="false" />
+                <line number="30" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="31" hits="0" branch="false" />
+                <line number="33" hits="0" branch="false" />
+                <line number="34" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="1" branch="false" />
+            <line number="10" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="11" hits="1" branch="false" />
+            <line number="13" hits="0" branch="false" />
+            <line number="14" hits="1" branch="false" />
+            <line number="17" hits="0" branch="false" />
+            <line number="18" hits="0" branch="false" />
+            <line number="19" hits="0" branch="false" />
+            <line number="22" hits="0" branch="false" />
+            <line number="23" hits="0" branch="false" />
+            <line number="25" hits="0" branch="false" />
+            <line number="26" hits="0" branch="false" />
+            <line number="29" hits="0" branch="false" />
+            <line number="30" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="31" hits="0" branch="false" />
+            <line number="33" hits="0" branch="false" />
+            <line number="34" hits="0" branch="false" />
           </lines>
         </class>
         <class name="CoachLife.Domain.Models.User" filename="C:\Users\User\Documents\Labs\CoachLife\CoachLife\Domain\Models\User.cs" line-rate="0" branch-rate="1" complexity="6">
@@ -125,14 +243,14 @@
               <lines>
                 <line number="9" hits="0" branch="false" />
                 <line number="10" hits="0" branch="false" />
-                <line number="11" hits="0" branch="false" />
+                <line number="12" hits="0" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
             <line number="9" hits="0" branch="false" />
             <line number="10" hits="0" branch="false" />
-            <line number="11" hits="0" branch="false" />
+            <line number="12" hits="0" branch="false" />
           </lines>
         </class>
         <class name="Program" filename="C:\Users\User\Documents\Labs\CoachLife\CoachLife\Program.cs" line-rate="0" branch-rate="0" complexity="2">
@@ -179,7 +297,7 @@
         </class>
       </classes>
     </package>
-    <package name="CoachLifeTests" line-rate="0.923076923076923" branch-rate="1" complexity="8">
+    <package name="CoachLifeTests" line-rate="0.870967741935484" branch-rate="1" complexity="9">
       <classes>
         <class name="AutoGeneratedProgram" filename="C:\Users\User\.nuget\packages\microsoft.net.test.sdk\17.1.0\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -193,50 +311,68 @@
             <line number="4" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="CoachLifeTests.Api.Controllers.UserControllerTests" filename="C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\Api\Controllers\UserControllerTests.cs" line-rate="0.928571428571429" branch-rate="1" complexity="3">
+        <class name="CoachLifeTests.Api.Controllers.UserControllerTests" filename="C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\Api\Controllers\UserControllerTests.cs" line-rate="1" branch-rate="1" complexity="3">
           <methods>
-            <method name="ShouldGuardClause" signature="(...)" line-rate="0.666666666666667" branch-rate="1" complexity="1">
+            <method name="ShouldGuardClause" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
+                <line number="25" hits="1" branch="false" />
                 <line number="26" hits="1" branch="false" />
                 <line number="27" hits="1" branch="false" />
-                <line number="28" hits="0" branch="false" />
               </lines>
             </method>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
+                <line number="17" hits="2" branch="false" />
                 <line number="18" hits="2" branch="false" />
                 <line number="19" hits="2" branch="false" />
                 <line number="20" hits="2" branch="false" />
                 <line number="21" hits="2" branch="false" />
-                <line number="22" hits="2" branch="false" />
               </lines>
             </method>
             <method name="CanCallGetUserAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="32" hits="1" branch="false" />
-                <line number="34" hits="1" branch="false" />
-                <line number="36" hits="1" branch="false" />
-                <line number="39" hits="1" branch="false" />
-                <line number="42" hits="1" branch="false" />
-                <line number="44" hits="1" branch="false" />
+                <line number="31" hits="1" branch="false" />
+                <line number="33" hits="1" branch="false" />
+                <line number="35" hits="1" branch="false" />
+                <line number="38" hits="1" branch="false" />
+                <line number="41" hits="1" branch="false" />
+                <line number="43" hits="1" branch="false" />
+                <line number="45" hits="1" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
+            <line number="17" hits="2" branch="false" />
             <line number="18" hits="2" branch="false" />
             <line number="19" hits="2" branch="false" />
             <line number="20" hits="2" branch="false" />
             <line number="21" hits="2" branch="false" />
-            <line number="22" hits="2" branch="false" />
+            <line number="25" hits="1" branch="false" />
             <line number="26" hits="1" branch="false" />
             <line number="27" hits="1" branch="false" />
-            <line number="28" hits="0" branch="false" />
-            <line number="32" hits="1" branch="false" />
-            <line number="34" hits="1" branch="false" />
-            <line number="36" hits="1" branch="false" />
-            <line number="39" hits="1" branch="false" />
-            <line number="42" hits="1" branch="false" />
-            <line number="44" hits="1" branch="false" />
+            <line number="31" hits="1" branch="false" />
+            <line number="33" hits="1" branch="false" />
+            <line number="35" hits="1" branch="false" />
+            <line number="38" hits="1" branch="false" />
+            <line number="41" hits="1" branch="false" />
+            <line number="43" hits="1" branch="false" />
+            <line number="45" hits="1" branch="false" />
+          </lines>
+        </class>
+        <class name="CoachLifeTests.Fixtures.AutoData.AutoInlineDataAttribute" filename="C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\Fixtures\AutoData\AutoInlineDataAttribute.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="false" />
+                <line number="10" hits="0" branch="false" />
+                <line number="11" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0" branch="false" />
+            <line number="10" hits="0" branch="false" />
+            <line number="11" hits="0" branch="false" />
           </lines>
         </class>
         <class name="CoachLifeTests.Fixtures.AutoData.AutoNSubstituteAttribute" filename="C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\Fixtures\AutoData\AutoNSubstituteAttribute.cs" line-rate="1" branch-rate="1" complexity="2">
@@ -261,32 +397,34 @@
           <methods>
             <method name="Create" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="11" hits="1" branch="false" />
                 <line number="12" hits="1" branch="false" />
-                <line number="14" hits="1" branch="false" />
+                <line number="13" hits="1" branch="false" />
                 <line number="15" hits="1" branch="false" />
                 <line number="16" hits="1" branch="false" />
-                <line number="17" hits="1" branch="false" />
+                <line number="18" hits="1" branch="false" />
+                <line number="19" hits="1" branch="false" />
               </lines>
             </method>
             <method name="Customize" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="1" branch="false" />
-                <line number="23" hits="1" branch="false" />
                 <line number="24" hits="1" branch="false" />
+                <line number="25" hits="1" branch="false" />
+                <line number="27" hits="2" branch="false" />
+                <line number="28" hits="1" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="11" hits="1" branch="false" />
             <line number="12" hits="1" branch="false" />
-            <line number="14" hits="1" branch="false" />
+            <line number="13" hits="1" branch="false" />
             <line number="15" hits="1" branch="false" />
             <line number="16" hits="1" branch="false" />
-            <line number="17" hits="1" branch="false" />
-            <line number="22" hits="1" branch="false" />
-            <line number="23" hits="1" branch="false" />
+            <line number="18" hits="1" branch="false" />
+            <line number="19" hits="1" branch="false" />
             <line number="24" hits="1" branch="false" />
+            <line number="25" hits="1" branch="false" />
+            <line number="27" hits="2" branch="false" />
+            <line number="28" hits="1" branch="false" />
           </lines>
         </class>
       </classes>

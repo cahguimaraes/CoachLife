@@ -1,6 +1,7 @@
 ﻿using AutoFixture;
 using Bogus;
 using CoachLife.Domain.Models;
+using CoachLife.Domain.Services.Interfaces;
 using NSubstitute;
 
 namespace CoachLifeTests.Fixtures.AutoData
@@ -13,6 +14,7 @@ namespace CoachLifeTests.Fixtures.AutoData
 
             var fixture = new Fixture()
                 .Customize(new SubstituteCustomization());
+
             return fixture;
         }
 
@@ -21,6 +23,7 @@ namespace CoachLifeTests.Fixtures.AutoData
             public void Customize(IFixture fixture)
             {
                 fixture.Register(() => Substitute.For<User>());
+                fixture.Register<IUserService>(() => null);
             }
         }
     }

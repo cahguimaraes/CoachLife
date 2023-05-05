@@ -4,9 +4,8 @@ namespace CoachLifeTests.Api.Controllers
     using CoachLife.Api.Controllers;
     using CoachLife.Domain.Services.Interfaces;
     using CoachLifeTests.Fixtures.AutoData;
-    using Microsoft.AspNetCore.Mvc;
+    using FluentResults;
     using NSubstitute;
-    using System;
     using System.Threading.Tasks;
     using Xunit;
 
@@ -33,7 +32,7 @@ namespace CoachLifeTests.Api.Controllers
             // Arrange
             var userId = 1707220788;
 
-            _userService.GetUserAsync(Arg.Any<int>()).Returns(Substitute.For<IActionResult>());
+            _userService.GetUserAsync(Arg.Any<int>()).Returns(Substitute.For<Result>());
 
             // Act
             var result = await _testClass.GetUserAsync(userId);
@@ -41,7 +40,8 @@ namespace CoachLifeTests.Api.Controllers
             // Assert
             await _userService.Received().GetUserAsync(Arg.Any<int>());
 
-            throw new NotImplementedException("Create or modify test");
+            Assert.True(result.IsSuccess);
+            //((OkObjectResult)result).StatusCode.Should().Be((int)HttpStatusCode.OK);
         }
     }
 }

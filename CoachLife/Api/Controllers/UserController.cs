@@ -1,4 +1,6 @@
-﻿using CoachLife.Domain.Services.Interfaces;
+﻿using CoachLife.Application.Extensions;
+using CoachLife.Domain.Services.Interfaces;
+using FluentResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoachLife.Api.Controllers
@@ -13,11 +15,14 @@ namespace CoachLife.Api.Controllers
         }
 
         [HttpGet("user/{userId}")]
-        public async Task<IActionResult> GetUserAsync(int userId)
+        public async Task<Result<ResultDto>> GetUserAsync(int userId)
         {
-            await _userService.GetUserAsync(userId);
+            var user = await _userService.GetUserAsync(userId);
 
-            return Ok(userId);
+            if (user.IsFailed)
+                return user.ToResultDto();
+
+            return user.ToResultDto();
         }
     }
 }

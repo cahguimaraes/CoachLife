@@ -8,6 +8,7 @@ namespace CoachLife.Infra.Extensions
         public static void AddApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<IUserService, UserService>();
+            // services.AddDbContext<User>();
         }
     }
 }

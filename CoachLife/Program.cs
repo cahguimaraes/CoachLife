@@ -1,4 +1,6 @@
-﻿using CoachLife.Infra.Extensions;
+﻿using CoachLife.Infra.Context;
+using CoachLife.Infra.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHealthChecks();
 builder.Services.AddApplicationServices();
 
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<LifeCoachContext>(x => x.UseSqlServer(connectionString));
 
 var app = builder.Build();
 

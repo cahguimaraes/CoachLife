@@ -1,6 +1,6 @@
 ﻿namespace CoachLife.Domain.Models
 {
-    public class User
+    public class User : Entity
     {
         public int UserId { get; set; }
         public string UserDocumentNumber { get; set; }

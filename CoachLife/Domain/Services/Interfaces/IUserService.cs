@@ -4,6 +4,6 @@ namespace CoachLife.Domain.Services.Interfaces
 {
     public interface IUserService
     {
-        Task<Result> GetUserAsync(int userId);
+        Task<Result> GetUserAsync(string documentNumber);
     }
 }

@@ -1,4 +1,4 @@
-﻿using CoachLife.Domain.Models;
+﻿using CoachLife.Domain.Interfaces;
 using CoachLife.Domain.Services.Interfaces;
 using FluentResults;
 
@@ -6,22 +6,20 @@ namespace CoachLife.Domain.Services
 {
     public class UserService : IUserService
     {
-        public UserService()
+        private readonly IUserRepository _userRepository;
+        public UserService(IUserRepository userRepository)
         {
-
+            _userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
         }
 
-        public async Task<Result> GetUserAsync(int userId)
+        public async Task<Result> GetUserAsync(string documentNumber)
         {
-            if (userId == 0)
+            var user = await _userRepository.GetByDocumentNumber(documentNumber);
+
+            if (user == null)
                 return Result.Fail("User not found");
 
-            var user = new User();
-            user.UserId = userId;
-            user.UserFullName = "Carolaine";
-            user.UserStatus = "Active";
-            user.UserDocumentNumber = "123456";
-
+            //return Result.Ok(_mapper.Map<SearchUserResponse>(user));
             return Result.Ok();
         }
     }

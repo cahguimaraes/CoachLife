@@ -30,15 +30,15 @@ namespace CoachLifeTests.Api.Controllers
         public async Task CanCallGetUserAsync()
         {
             // Arrange
-            var userId = 1707220788;
+            var documentNumber = "123456";
 
-            _userService.GetUserAsync(Arg.Any<int>()).Returns(Substitute.For<Result>());
+            _userService.GetUserAsync(Arg.Any<string>()).Returns(Substitute.For<Result>());
 
             // Act
-            var result = await _testClass.GetUserAsync(userId);
+            var result = await _testClass.GetUserAsync(documentNumber);
 
             // Assert
-            await _userService.Received().GetUserAsync(Arg.Any<int>());
+            await _userService.Received().GetUserAsync(Arg.Any<string>());
 
             Assert.True(result.IsSuccess);
             //((OkObjectResult)result).StatusCode.Should().Be((int)HttpStatusCode.OK);

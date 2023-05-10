@@ -1,6 +1,5 @@
-﻿using CoachLife.Application.Extensions;
+﻿using CoachLife.Application.Extensions.FluentResult;
 using CoachLife.Domain.Services.Interfaces;
-using FluentResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoachLife.Api.Controllers
@@ -15,14 +14,26 @@ namespace CoachLife.Api.Controllers
         }
 
         [HttpGet("user/{documentNumber}")]
-        public async Task<Result<ResultDto>> GetUserAsync(string documentNumber)
+        public async Task<ActionResult> GetUserAsync(string documentNumber)
         {
             var user = await _userService.GetUserAsync(documentNumber);
 
             if (user.IsFailed)
-                return user.ToResultDto();
+                return user.ToActionResult();
 
-            return user.ToResultDto();
+            return user.ToActionResult();
         }
+
+        //[HttpPost]
+        //public async Task<Result<ResultDto>> Post(
+        //    [FromBody] CreateUserRequest request)
+        //{
+        //    var user = await _userService.CreateUser(request.UserId, request.Password);
+
+        //    if (user.IsFailed)
+        //        return user.ToResultDto();
+
+        //    return user.ToResultDto();
+        //}
     }
 }

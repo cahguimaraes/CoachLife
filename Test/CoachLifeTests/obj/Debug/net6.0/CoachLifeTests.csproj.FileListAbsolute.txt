@@ -19,12 +19,15 @@ C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\Auto
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\AutoFixture.AutoNSubstitute.dll
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\AutoFixture.Idioms.dll
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\AutoFixture.Xunit2.dll
+C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\AWSSDK.CognitoIdentityProvider.dll
+C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\AWSSDK.Core.dll
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\Azure.Identity.dll
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\Bogus.dll
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\Castle.Core.dll
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\Fare.dll
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\FluentResults.dll
+C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\Humanizer.dll
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\MessagePack.dll
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\MessagePack.Annotations.dll
@@ -377,3 +380,6 @@ C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\obj\Debug\net6.0\refi
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\obj\Debug\net6.0\CoachLifeTests.pdb
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\obj\Debug\net6.0\CoachLifeTests.genruntimeconfig.cache
 C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\obj\Debug\net6.0\ref\CoachLifeTests.dll
+C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\Amazon.Extensions.CognitoAuthentication.dll
+C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\AWSSDK.CognitoIdentity.dll
+C:\Users\User\Documents\Labs\CoachLife\Test\CoachLifeTests\bin\Debug\net6.0\AWSSDK.SecurityToken.dll

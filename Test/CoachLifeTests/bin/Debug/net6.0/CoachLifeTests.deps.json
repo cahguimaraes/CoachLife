@@ -30,6 +30,18 @@
           }
         }
       },
+      "Amazon.Extensions.CognitoAuthentication/2.4.0": {
+        "dependencies": {
+          "AWSSDK.CognitoIdentity": "3.7.0.2",
+          "AWSSDK.CognitoIdentityProvider": "3.7.101.126"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Amazon.Extensions.CognitoAuthentication.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "AutoFixture/4.18.0": {
         "dependencies": {
           "Fare": "2.1.1",
@@ -76,6 +88,48 @@
           "lib/netstandard2.0/AutoFixture.Xunit2.dll": {
             "assemblyVersion": "4.18.0.0",
             "fileVersion": "4.18.0.688"
+          }
+        }
+      },
+      "AWSSDK.CognitoIdentity/3.7.0.2": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.106.33",
+          "AWSSDK.SecurityToken": "3.7.0.2"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.CognitoIdentity.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.0.2"
+          }
+        }
+      },
+      "AWSSDK.CognitoIdentityProvider/3.7.101.126": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.106.33"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.CognitoIdentityProvider.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.101.126"
+          }
+        }
+      },
+      "AWSSDK.Core/3.7.106.33": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.106.33"
+          }
+        }
+      },
+      "AWSSDK.SecurityToken/3.7.0.2": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.106.33"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.SecurityToken.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.0.2"
           }
         }
       },
@@ -175,6 +229,14 @@
           "lib/netstandard2.1/FluentResults.dll": {
             "assemblyVersion": "3.15.2.0",
             "fileVersion": "3.15.2.0"
+          }
+        }
+      },
+      "FluentValidation/11.5.2": {
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.5.2.0"
           }
         }
       },
@@ -3095,7 +3157,10 @@
       "xunit.runner.visualstudio/2.4.3": {},
       "CoachLife/1.0.0": {
         "dependencies": {
+          "AWSSDK.CognitoIdentityProvider": "3.7.101.126",
+          "Amazon.Extensions.CognitoAuthentication": "2.4.0",
           "FluentResults": "3.15.2",
+          "FluentValidation": "11.5.2",
           "Microsoft.AspNet.Mvc": "5.2.9",
           "Microsoft.AspNet.WebApi.Core": "5.2.9",
           "Microsoft.EntityFrameworkCore": "7.0.5",
@@ -3121,6 +3186,13 @@
       "sha512": "sha512-Qxnl9XFdxDYzsru/atgi3b0E6EhCtAV1kXaYogpH1/C7fSAwlZ3ZDMNA6kqeXHBFbWKryv+hwf4WIeps0iDgPA==",
       "path": "albedo/2.0.0",
       "hashPath": "albedo.2.0.0.nupkg.sha512"
+    },
+    "Amazon.Extensions.CognitoAuthentication/2.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P7J4JuEKeDCx6mV+qLDeTLwLiGy9MmXABqmUnMVdNVdvF3xr3Mgn63qbWSESXfK/exT4Tkq2zXdNTSeHlVaGgg==",
+      "path": "amazon.extensions.cognitoauthentication/2.4.0",
+      "hashPath": "amazon.extensions.cognitoauthentication.2.4.0.nupkg.sha512"
     },
     "AutoFixture/4.18.0": {
       "type": "package",
@@ -3149,6 +3221,34 @@
       "sha512": "sha512-m44VA9qYpqqO6zvSflMOxNNTukMuz+pcY4DrAldFh6f3LpRNTK1dquWI+96jlS9fa4Mli+RnXApveWGnl5w9zw==",
       "path": "autofixture.xunit2/4.18.0",
       "hashPath": "autofixture.xunit2.4.18.0.nupkg.sha512"
+    },
+    "AWSSDK.CognitoIdentity/3.7.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fqWI5WQ+73qlnIK5KZ3peKMweX7nE8aj4uMX3t9OLAvjUP9HFDcb6N4EVn2ZXzqi35eR/LuqdwqxCHrFrUMjeA==",
+      "path": "awssdk.cognitoidentity/3.7.0.2",
+      "hashPath": "awssdk.cognitoidentity.3.7.0.2.nupkg.sha512"
+    },
+    "AWSSDK.CognitoIdentityProvider/3.7.101.126": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JXVFWiJobPO3wnMk14cutogx9kHEenDtXh/bz4gpvwv6nk02+Q4YaLiF/lTDxV/NIu+pctiFaMdlv/Iukb7/xg==",
+      "path": "awssdk.cognitoidentityprovider/3.7.101.126",
+      "hashPath": "awssdk.cognitoidentityprovider.3.7.101.126.nupkg.sha512"
+    },
+    "AWSSDK.Core/3.7.106.33": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1TALTvy7zOUUtmW5FD6jVYs7R2+vCKRfwkrNbwdGamW0VyMsY2kLYlgjJiZjuC+6UY3+niyqDR9DskFjqTjwVA==",
+      "path": "awssdk.core/3.7.106.33",
+      "hashPath": "awssdk.core.3.7.106.33.nupkg.sha512"
+    },
+    "AWSSDK.SecurityToken/3.7.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OFZjQ+AM4tDP/gVpqHm2MOY2Ibr/3PfWTACc7nZEm1AjrBg514/n70+Ooo9mqzBVFwOv11+QbHvKxbR/+jHv8A==",
+      "path": "awssdk.securitytoken/3.7.0.2",
+      "hashPath": "awssdk.securitytoken.3.7.0.2.nupkg.sha512"
     },
     "Azure.Core/1.24.0": {
       "type": "package",
@@ -3198,6 +3298,13 @@
       "sha512": "sha512-yR3PD1SWKirYNpQ/t9TjJrsp1adazMmozLDPeamvSIljLAIjS0EQyyGvoupWsbZEryqW9SHbKXVL8YaJwURk8w==",
       "path": "fluentresults/3.15.2",
       "hashPath": "fluentresults.3.15.2.nupkg.sha512"
+    },
+    "FluentValidation/11.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kj/hW/iusp2zq1Vt1YPLgDj6UG0DhoJXGkLwjLwm3j7vUtRF8DVA5vHJfItG3BxDjLWJUR2pvw8fK7rnuysZNA==",
+      "path": "fluentvalidation/11.5.2",
+      "hashPath": "fluentvalidation.11.5.2.nupkg.sha512"
     },
     "Humanizer.Core/2.2.0": {
       "type": "package",

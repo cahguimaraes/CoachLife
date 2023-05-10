@@ -40,9 +40,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AWSSDK.CognitoIdentityProvider": {
+              "target": "Package",
+              "version": "[3.7.101.126, )"
+            },
+            "Amazon.Extensions.CognitoAuthentication": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
             "FluentResults": {
               "target": "Package",
               "version": "[3.15.2, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.2, )"
             },
             "Microsoft.AspNet.Mvc": {
               "target": "Package",

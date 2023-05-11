@@ -16,19 +16,19 @@ namespace CoachLife.Domain.Services
             //  _signUpService = signUpService ?? throw new ArgumentNullException(nameof(signUpService));
         }
 
-        public async Task<Result> CreateUser(int id, string password)
+        public async Task<Result<User>> CreateUser(int id, string password)
         {
             var user = await _userRepository.GetById(id);
 
             if (user == null)
-                return Result.Fail("User not found");
+                return Result.Fail<User>("User not found");
 
             // await _signUpService.SignUp(user, password);
 
             await _userRepository.UpdateUserStatus(user, UserStatus.INATIVE);
 
             //return Result.Ok(_mapper.Map<SearchUserResponse>(user));
-            return Result.Ok();
+            return Result.Ok(user);
         }
 
         public async Task<Result<User>> GetUserAsync(string documentNumber)

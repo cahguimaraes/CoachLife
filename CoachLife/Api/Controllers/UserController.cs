@@ -1,6 +1,7 @@
 ﻿using CoachLife.Application.Extensions.FluentResult;
 using CoachLife.Domain.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace CoachLife.Api.Controllers
 {
@@ -13,15 +14,26 @@ namespace CoachLife.Api.Controllers
             _userService = userService ?? throw new ArgumentNullException(nameof(userService));
         }
 
+        //[HttpGet("user/{documentNumber}")]
+        //public async Task<ActionResult> GetUserAsync(string documentNumber)
+        //{
+        //    var user = await _userService.GetUserAsync(documentNumber);
+
+        //    if (user.IsFailed)
+        //        return user.ToActionResult();
+
+        //    return user.ToActionResult();
+        //}
+
         [HttpGet("user/{documentNumber}")]
-        public async Task<ActionResult> GetUserAsync(string documentNumber)
+        public async Task<IActionResult> GetUserAsync(string documentNumber)
         {
             var user = await _userService.GetUserAsync(documentNumber);
 
             if (user.IsFailed)
-                return user.ToActionResult();
+                return user.ToActionResultAndStatusCode(HttpStatusCode.NotFound);
 
-            return user.ToActionResult();
+            return user.ToActionResultAndStatusCode(HttpStatusCode.NotFound);
         }
 
         //[HttpPost]

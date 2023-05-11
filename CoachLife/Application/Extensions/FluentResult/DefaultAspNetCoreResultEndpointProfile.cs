@@ -9,12 +9,13 @@ namespace CoachLife.Application.Extensions.FluentResult
         {
             var result = context.Result;
 
-            var errorDtos = result.Errors.Select(e => new ErrorDto
+            var errorDtos = result.Errors.Select(e => new HttpResponseMessage
             {
-                Message = e.Message
+                ReasonPhrase = e.Message,
+                StatusCode = context.StatusCode
             });
 
-            return new BadRequestObjectResult(errorDtos);
+            return new NotFoundObjectResult(errorDtos);
         }
 
         public virtual ActionResult TransformOkNoValueResultToActionResult(OkResultToActionResultTransformationContext<Result> context)

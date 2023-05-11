@@ -1,15 +1,18 @@
 ﻿using FluentResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace CoachLife.Application.Extensions.FluentResult
 {
     public class FailedResultToActionResultTransformationContext
     {
         public ResultBase Result { get; }
+        public HttpStatusCode StatusCode { get; }
 
-        public FailedResultToActionResultTransformationContext(ResultBase result)
+        public FailedResultToActionResultTransformationContext(ResultBase result, HttpStatusCode statusCode)
         {
             Result = result;
+            StatusCode = statusCode;
         }
     }
 
@@ -17,21 +20,25 @@ namespace CoachLife.Application.Extensions.FluentResult
         where TResult : ResultBase
     {
         public TResult Result { get; }
+        public HttpStatusCode StatusCode { get; }
 
-        public OkResultToActionResultTransformationContext(TResult result)
+        public OkResultToActionResultTransformationContext(TResult result, HttpStatusCode statusCode)
         {
             Result = result;
+            StatusCode = statusCode;
         }
     }
 
     public interface IErrorDto
     {
         string Message { get; set; }
+        HttpResponseMessage StatusCode { get; set; }
     }
 
     public class ErrorDto : IErrorDto
     {
         public string Message { get; set; }
+        public HttpResponseMessage StatusCode { get; set; }
     }
 
     public class OkResponse
@@ -47,33 +54,35 @@ namespace CoachLife.Application.Extensions.FluentResult
     public interface ISuccessDto
     {
         string Message { get; set; }
+        public HttpStatusCode StatusCode { get; set; }
     }
 
     public class SuccessDto : ISuccessDto
     {
         public string Message { get; set; }
+        public HttpStatusCode StatusCode { get; set; }
     }
 
     public class ResultToActionResultTransformer
     {
-        public ActionResult Transform(Result result, IAspNetCoreResultEndpointProfile profile)
+        public ActionResult Transform(Result result, HttpStatusCode? statusCode, IAspNetCoreResultEndpointProfile profile)
         {
             if (result.IsFailed)
             {
-                return profile.TransformFailedResultToActionResult(new FailedResultToActionResultTransformationContext(result));
+                return profile.TransformFailedResultToActionResult(new FailedResultToActionResultTransformationContext(result, statusCode.GetValueOrDefault()));
             }
 
-            return profile.TransformOkNoValueResultToActionResult(new OkResultToActionResultTransformationContext<Result>(result));
+            return profile.TransformOkNoValueResultToActionResult(new OkResultToActionResultTransformationContext<Result>(result, statusCode.GetValueOrDefault()));
         }
 
-        public ActionResult Transform<T>(Result<T> result, IAspNetCoreResultEndpointProfile profile)
+        public ActionResult Transform<T>(Result<T> result, HttpStatusCode? statusCode, IAspNetCoreResultEndpointProfile profile)
         {
             if (result.IsFailed)
             {
-                return profile.TransformFailedResultToActionResult(new FailedResultToActionResultTransformationContext(result));
+                return profile.TransformFailedResultToActionResult(new FailedResultToActionResultTransformationContext(result, statusCode.GetValueOrDefault()));
             }
 
-            return profile.TransformOkValueResultToActionResult(new OkResultToActionResultTransformationContext<Result<T>>(result));
+            return profile.TransformOkValueResultToActionResult(new OkResultToActionResultTransformationContext<Result<T>>(result, statusCode.GetValueOrDefault()));
         }
     }
 }

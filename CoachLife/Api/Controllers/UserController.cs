@@ -14,26 +14,15 @@ namespace CoachLife.Api.Controllers
             _userService = userService ?? throw new ArgumentNullException(nameof(userService));
         }
 
-        //[HttpGet("user/{documentNumber}")]
-        //public async Task<ActionResult> GetUserAsync(string documentNumber)
-        //{
-        //    var user = await _userService.GetUserAsync(documentNumber);
-
-        //    if (user.IsFailed)
-        //        return user.ToActionResult();
-
-        //    return user.ToActionResult();
-        //}
-
         [HttpGet("user/{documentNumber}")]
         public async Task<IActionResult> GetUserAsync(string documentNumber)
         {
             var user = await _userService.GetUserAsync(documentNumber);
 
             if (user.IsFailed)
-                return user.ToActionResultAndStatusCode(HttpStatusCode.NotFound);
+                return user.ToActionResult(HttpStatusCode.NotFound);
 
-            return user.ToActionResultAndStatusCode(HttpStatusCode.NotFound);
+            return user.ToActionResult(HttpStatusCode.OK);
         }
 
         //[HttpPost]

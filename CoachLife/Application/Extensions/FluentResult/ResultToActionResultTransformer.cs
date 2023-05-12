@@ -32,35 +32,11 @@ namespace CoachLife.Application.Extensions.FluentResult
     public interface IErrorDto
     {
         string Message { get; set; }
-        HttpResponseMessage StatusCode { get; set; }
     }
 
     public class ErrorDto : IErrorDto
     {
         public string Message { get; set; }
-        public HttpResponseMessage StatusCode { get; set; }
-    }
-
-    public class OkResponse
-    {
-        public IEnumerable<ISuccessDto> Successes { get; set; }
-    }
-
-    public class OkResponse<T> : OkResponse
-    {
-        public T Value { get; set; }
-    }
-
-    public interface ISuccessDto
-    {
-        string Message { get; set; }
-        public HttpStatusCode StatusCode { get; set; }
-    }
-
-    public class SuccessDto : ISuccessDto
-    {
-        public string Message { get; set; }
-        public HttpStatusCode StatusCode { get; set; }
     }
 
     public class ResultToActionResultTransformer

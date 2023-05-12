@@ -9,13 +9,15 @@ namespace CoachLife.Application.Extensions.FluentResult
         {
             var result = context.Result;
 
-            var errorDtos = result.Errors.Select(e => new HttpResponseMessage
+            var resultado = new ObjectResult(null);
+            resultado.StatusCode = (int)context.StatusCode;
+
+            resultado.Value = result.Errors.Select(e => new ErrorDto
             {
-                ReasonPhrase = e.Message,
-                StatusCode = context.StatusCode
+                Message = e.Message
             });
 
-            return new NotFoundObjectResult(errorDtos);
+            return resultado;
         }
 
         public virtual ActionResult TransformOkNoValueResultToActionResult(OkResultToActionResultTransformationContext<Result> context)
@@ -25,7 +27,11 @@ namespace CoachLife.Application.Extensions.FluentResult
 
         public virtual ActionResult TransformOkValueResultToActionResult<T>(OkResultToActionResultTransformationContext<Result<T>> context)
         {
-            return new OkObjectResult(context.Result.ValueOrDefault);
+            var result = context.Result;
+
+            var objectResult = new OkObjectResult(result.ValueOrDefault);
+            objectResult.StatusCode = (int)context.StatusCode;
+            return objectResult;
         }
     }
 }

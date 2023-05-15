@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[2.4.0, )"
             },
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.11.0, )"
+            },
             "FluentResults": {
               "target": "Package",
               "version": "[3.15.2, )"
@@ -55,10 +59,6 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.0, )"
-            },
-            "FluentValidation.DependencyInjectionExtensions": {
-              "target": "Package",
-              "version": "[11.5.2, )"
             },
             "Microsoft.AspNet.Mvc": {
               "target": "Package",

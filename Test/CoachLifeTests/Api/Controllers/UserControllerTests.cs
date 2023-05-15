@@ -1,9 +1,15 @@
 namespace CoachLifeTests.Api.Controllers
 {
+    using AutoFixture;
+    using AutoFixture.AutoNSubstitute;
     using AutoFixture.Idioms;
     using CoachLife.Api.Controllers;
+    using CoachLife.Domain.Models;
     using CoachLife.Domain.Services.Interfaces;
     using CoachLifeTests.Fixtures.AutoData;
+    using FluentAssertions;
+    using FluentResults;
+    using Microsoft.AspNetCore.Mvc;
     using NSubstitute;
     using System.Threading.Tasks;
     using Xunit;
@@ -29,18 +35,37 @@ namespace CoachLifeTests.Api.Controllers
         public async Task CanCallGetUserAsync()
         {
             // Arrange
-            //var documentNumber = Fixture.Create(UserRequestDto);
+            var fixture = new Fixture().Customize(new AutoNSubstituteCustomization());
+            var documentNumber = fixture.Create<string>();
 
-            //_userService.GetUserAsync(Arg.Any<UserRequestDto>()).Returns(Substitute.For<Result>());
+            _userService.GetUserAsync(Arg.Any<string>())
+                .Returns(fixture.Create<Result<User>>());
 
-            //// Act
-            //var result = await _testClass.GetUserAsync(documentNumber);
+            // Act
+            var result = await _testClass.GetUserAsync(documentNumber);
 
-            //// Assert
-            //await _userService.Received().GetUserAsync(Arg.Any<string>());
+            // Assert
+            await _userService.Received().GetUserAsync(Arg.Any<string>());
+            result.Should().BeOfType<OkObjectResult>();
+        }
 
-            //Assert.True(result.ToActionResult()) ;
-            //((OkObjectResult)result).StatusCode.Should().Be((int)HttpStatusCode.OK);
+        [Fact]
+        public async Task CannotCallGetUserAsyncReturnNotFound()
+        {
+            // Arrange
+            var fixture = new Fixture().Customize(new AutoNSubstituteCustomization());
+            var documentNumber = fixture.Create<string>();
+            var error = Result.Fail<User>("User not found");
+
+            _userService.GetUserAsync(Arg.Any<string>())
+                .Returns(error);
+
+            // Act
+            var result = await _testClass.GetUserAsync(documentNumber);
+
+            // Assert
+            await _userService.Received().GetUserAsync(Arg.Any<string>());
+            result.Should().BeOfType<ObjectResult>();
         }
     }
 }

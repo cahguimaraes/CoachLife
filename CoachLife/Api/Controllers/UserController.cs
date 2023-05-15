@@ -1,4 +1,5 @@
 ﻿using CoachLife.Application.Extensions.FluentResult;
+using CoachLife.Domain.DTOs.Request;
 using CoachLife.Domain.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -27,16 +28,16 @@ namespace CoachLife.Api.Controllers
             return user.ToActionResult(HttpStatusCode.OK);
         }
 
-        //[HttpPost]
-        //public async Task<Result<ResultDto>> Post(
-        //    [FromBody] CreateUserRequest request)
-        //{
-        //    var user = await _userService.CreateUser(request.UserId, request.Password);
+        [HttpPost]
+        public async Task<IActionResult> PostUserAsync([FromBody] UserRequestDto request)
+        {
+            // Call Validate or ValidateAsync and pass the object which needs to be validated
+            if (!ModelState.IsValid)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, ModelState);
+            }
 
-        //    if (user.IsFailed)
-        //        return user.ToResultDto();
-
-        //    return user.ToResultDto();
-        //}
+            return StatusCode(StatusCodes.Status200OK, "Model is valid!");
+        }
     }
 }

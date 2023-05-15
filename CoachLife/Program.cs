@@ -12,16 +12,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHealthChecks();
 builder.Services.AddApplicationServices();
 
-
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<LifeCoachContext>(x => x.UseSqlServer(connectionString));
 
 var awsConfiguration = new AwsConfiguration();
 builder.Configuration.Bind("AWS", awsConfiguration);
 builder.Services.AddSingleton(awsConfiguration);
-
-//builder.Services.AddSingleton < IAmazonCognitoIdentityProvider(awsConfiguration);
-//builder.Services.AddSingleton<CognitoUserPool>(awsConfiguration);
 
 var app = builder.Build();
 

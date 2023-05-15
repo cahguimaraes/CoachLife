@@ -6,6 +6,7 @@ using System.Net;
 namespace CoachLife.Api.Controllers
 {
     [ApiController]
+    [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -14,8 +15,9 @@ namespace CoachLife.Api.Controllers
             _userService = userService ?? throw new ArgumentNullException(nameof(userService));
         }
 
-        [HttpGet("user/{documentNumber}")]
-        public async Task<IActionResult> GetUserAsync(string documentNumber)
+        [HttpGet]
+        [Route("{documentNumber}")]
+        public async Task<IActionResult> GetUserAsync([FromRoute] string documentNumber)
         {
             var user = await _userService.GetUserAsync(documentNumber);
 

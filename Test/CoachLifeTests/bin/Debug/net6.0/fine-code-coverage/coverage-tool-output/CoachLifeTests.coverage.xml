@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.42100000000000004" branch-rate="0.23070000000000002" version="1.9" timestamp="1684177683" lines-covered="96" lines-valid="228" branches-covered="6" branches-valid="26">
+<coverage line-rate="0.3735" branch-rate="0.1578" version="1.9" timestamp="1684264938" lines-covered="96" lines-valid="257" branches-covered="6" branches-valid="38">
   <sources>
     <source>C:\Users\User\</source>
   </sources>
   <packages>
-    <package name="CoachLife" line-rate="0.3081" branch-rate="0.23070000000000002" complexity="63">
+    <package name="CoachLife" line-rate="0.2663" branch-rate="0.1578" complexity="74">
       <classes>
         <class name="Program" filename="Documents\Labs\CoachLife\CoachLife\Program.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
@@ -350,50 +350,22 @@
             <line number="10" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="CoachLife.Domain.DTOs.Validator.UserRequestValidator" filename="Documents\Labs\CoachLife\CoachLife\Domain\DTOs\Validator\UserRequestValidator.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="CoachLife.Domain.DTOs.Validator.UserRequestDtoValidator" filename="Documents\Labs\CoachLife\CoachLife\Domain\DTOs\Validator\UserRequestDtoValidator.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="0" branch="False" />
                 <line number="10" hits="0" branch="False" />
                 <line number="11" hits="0" branch="False" />
                 <line number="12" hits="0" branch="False" />
                 <line number="13" hits="0" branch="False" />
-                <line number="14" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="9" hits="0" branch="False" />
             <line number="10" hits="0" branch="False" />
             <line number="11" hits="0" branch="False" />
             <line number="12" hits="0" branch="False" />
             <line number="13" hits="0" branch="False" />
-            <line number="14" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="CoachLife.Domain.DTOs.Response.CreateUserResponse" filename="Documents\Labs\CoachLife\CoachLife\Domain\DTOs\Response\CreateUserResponse.cs" line-rate="0" branch-rate="1" complexity="3">
-          <methods>
-            <method name="get_Session" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="5" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="(System.String)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="7" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="9" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="5" hits="0" branch="False" />
-            <line number="7" hits="0" branch="False" />
-            <line number="9" hits="0" branch="False" />
           </lines>
         </class>
         <class name="CoachLife.Domain.DTOs.Request.UserRequestDto" filename="Documents\Labs\CoachLife\CoachLife\Domain\DTOs\Request\UserRequestDto.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -468,6 +440,150 @@
             <line number="26" hits="0" branch="False" />
             <line number="27" hits="0" branch="False" />
             <line number="29" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="CoachLife.Application.Extensions.FluentValidation.CPFValidator`1" filename="Documents\Labs\CoachLife\CoachLife\Application\Extensions\FluentValidation\CPFValidator.cs" line-rate="0" branch-rate="0" complexity="13">
+          <methods>
+            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="IsValid" signature="(FluentValidation.ValidationContext`1&lt;T&gt;,System.String)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="11" hits="0" branch="False" />
+                <line number="12" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="9" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="13" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="IsValidCpf" signature="(System.String)" line-rate="0" branch-rate="0" complexity="10">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="97" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+                <line number="33" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="173" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="191" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="37" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="277" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="44" hits="0" branch="False" />
+                <line number="45" hits="0" branch="False" />
+                <line number="46" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="295" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="47" hits="0" branch="False" />
+                <line number="49" hits="0" branch="False" />
+                <line number="50" hits="0" branch="False" />
+                <line number="51" hits="0" branch="False" />
+                <line number="52" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="12" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="9" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="13" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="97" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+            <line number="33" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="173" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
+            <line number="36" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="191" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="37" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="277" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="44" hits="0" branch="False" />
+            <line number="45" hits="0" branch="False" />
+            <line number="46" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="295" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="47" hits="0" branch="False" />
+            <line number="49" hits="0" branch="False" />
+            <line number="50" hits="0" branch="False" />
+            <line number="51" hits="0" branch="False" />
+            <line number="52" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="CoachLife.Application.Extensions.FluentValidation.FluentValidationExtensions" filename="Documents\Labs\CoachLife\CoachLife\Application\Extensions\FluentValidation\FluentValidationExtensions.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="IsCpf" signature="(FluentValidation.IRuleBuilder`2&lt;T,System.String&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0" branch="False" />
           </lines>
         </class>
         <class name="CoachLife.Application.Extensions.FluentResult.AspNetCoreResult" filename="Documents\Labs\CoachLife\CoachLife\Application\Extensions\FluentResult\AspNetCoreResult.cs" line-rate="0.44439999999999996" branch-rate="1" complexity="3">

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.421052631578947" branch-rate="0.230769230769231" lines-covered="96" lines-valid="228" branches-covered="6" branches-valid="26" complexity="73" version="0" timestamp="1684166883">
+<coverage line-rate="0.373540856031128" branch-rate="0.157894736842105" lines-covered="96" lines-valid="257" branches-covered="6" branches-valid="38" complexity="84" version="0" timestamp="1684254139">
   <sources>
     <source>C:\Users\User\</source>
   </sources>
   <packages>
-    <package name="CoachLife" line-rate="0.308108108108108" branch-rate="0.230769230769231" complexity="63">
+    <package name="CoachLife" line-rate="0.266355140186916" branch-rate="0.157894736842105" complexity="74">
       <classes>
         <class name="CoachLife.Api.Controllers.UserController" filename="C:\Users\User\Documents\Labs\CoachLife\CoachLife\Api\Controllers\UserController.cs" line-rate="0.625" branch-rate="0.666666666666667" complexity="6">
           <methods>
@@ -301,6 +301,102 @@
             <line number="62" hits="2" branch="false" />
           </lines>
         </class>
+        <class name="CoachLife.Application.Extensions.FluentValidation.CPFValidator`1" filename="C:\Users\User\Documents\Labs\CoachLife\CoachLife\Application\Extensions\FluentValidation\CPFValidator.cs" line-rate="0" branch-rate="0" complexity="13">
+          <methods>
+            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="IsValid" signature="(...)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="11" hits="0" branch="false" />
+                <line number="12" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="13" hits="0" branch="false" />
+                <line number="15" hits="0" branch="false" />
+                <line number="16" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="IsValidCpf" signature="(...)" line-rate="0" branch-rate="0" complexity="10">
+              <lines>
+                <line number="19" hits="0" branch="false" />
+                <line number="20" hits="0" branch="false" />
+                <line number="21" hits="0" branch="false" />
+                <line number="26" hits="0" branch="false" />
+                <line number="27" hits="0" branch="false" />
+                <line number="28" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="29" hits="0" branch="false" />
+                <line number="30" hits="0" branch="false" />
+                <line number="31" hits="0" branch="false" />
+                <line number="33" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="34" hits="0" branch="false" />
+                <line number="35" hits="0" branch="false" />
+                <line number="36" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="37" hits="0" branch="false" />
+                <line number="39" hits="0" branch="false" />
+                <line number="40" hits="0" branch="false" />
+                <line number="41" hits="0" branch="false" />
+                <line number="42" hits="0" branch="false" />
+                <line number="43" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="44" hits="0" branch="false" />
+                <line number="45" hits="0" branch="false" />
+                <line number="46" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="47" hits="0" branch="false" />
+                <line number="49" hits="0" branch="false" />
+                <line number="50" hits="0" branch="false" />
+                <line number="51" hits="0" branch="false" />
+                <line number="52" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0" branch="false" />
+            <line number="11" hits="0" branch="false" />
+            <line number="12" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="13" hits="0" branch="false" />
+            <line number="15" hits="0" branch="false" />
+            <line number="16" hits="0" branch="false" />
+            <line number="19" hits="0" branch="false" />
+            <line number="20" hits="0" branch="false" />
+            <line number="21" hits="0" branch="false" />
+            <line number="26" hits="0" branch="false" />
+            <line number="27" hits="0" branch="false" />
+            <line number="28" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="29" hits="0" branch="false" />
+            <line number="30" hits="0" branch="false" />
+            <line number="31" hits="0" branch="false" />
+            <line number="33" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="34" hits="0" branch="false" />
+            <line number="35" hits="0" branch="false" />
+            <line number="36" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="37" hits="0" branch="false" />
+            <line number="39" hits="0" branch="false" />
+            <line number="40" hits="0" branch="false" />
+            <line number="41" hits="0" branch="false" />
+            <line number="42" hits="0" branch="false" />
+            <line number="43" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="44" hits="0" branch="false" />
+            <line number="45" hits="0" branch="false" />
+            <line number="46" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="47" hits="0" branch="false" />
+            <line number="49" hits="0" branch="false" />
+            <line number="50" hits="0" branch="false" />
+            <line number="51" hits="0" branch="false" />
+            <line number="52" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CoachLife.Application.Extensions.FluentValidation.FluentValidationExtensions" filename="C:\Users\User\Documents\Labs\CoachLife\CoachLife\Application\Extensions\FluentValidation\FluentValidationExtensions.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="IsCpf" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0" branch="false" />
+          </lines>
+        </class>
         <class name="CoachLife.Domain.Configuration.AwsConfiguration" filename="C:\Users\User\Documents\Labs\CoachLife\CoachLife\Domain\Configuration\AwsConfiguration.cs" line-rate="0" branch-rate="1" complexity="6">
           <methods>
             <method name="get_Region" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -375,50 +471,22 @@
             <line number="5" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="CoachLife.Domain.DTOs.Response.CreateUserResponse" filename="C:\Users\User\Documents\Labs\CoachLife\CoachLife\Domain\DTOs\Response\CreateUserResponse.cs" line-rate="0" branch-rate="1" complexity="3">
-          <methods>
-            <method name="get_Session" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="5" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="7" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="9" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="5" hits="0" branch="false" />
-            <line number="7" hits="0" branch="false" />
-            <line number="9" hits="0" branch="false" />
-          </lines>
-        </class>
-        <class name="CoachLife.Domain.DTOs.Validator.UserRequestValidator" filename="C:\Users\User\Documents\Labs\CoachLife\CoachLife\Domain\DTOs\Validator\UserRequestValidator.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="CoachLife.Domain.DTOs.Validator.UserRequestDtoValidator" filename="C:\Users\User\Documents\Labs\CoachLife\CoachLife\Domain\DTOs\Validator\UserRequestDtoValidator.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="0" branch="false" />
                 <line number="10" hits="0" branch="false" />
                 <line number="11" hits="0" branch="false" />
                 <line number="12" hits="0" branch="false" />
                 <line number="13" hits="0" branch="false" />
-                <line number="14" hits="0" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="9" hits="0" branch="false" />
             <line number="10" hits="0" branch="false" />
             <line number="11" hits="0" branch="false" />
             <line number="12" hits="0" branch="false" />
             <line number="13" hits="0" branch="false" />
-            <line number="14" hits="0" branch="false" />
           </lines>
         </class>
         <class name="CoachLife.Domain.Models.Entity" filename="C:\Users\User\Documents\Labs\CoachLife\CoachLife\Domain\Models\Entity.cs" line-rate="0" branch-rate="1" complexity="3">

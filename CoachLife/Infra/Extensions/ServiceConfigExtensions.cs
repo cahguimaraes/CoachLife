@@ -16,7 +16,7 @@ namespace CoachLife.Infra.Extensions
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddFluentValidationAutoValidation();
             services.AddFluentValidationClientsideAdapters();
-            services.AddValidatorsFromAssemblyContaining<UserRequestValidator>();
+            services.AddValidatorsFromAssemblyContaining<UserRequestDtoValidator>();
         }
     }
 }

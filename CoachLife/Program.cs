@@ -1,5 +1,4 @@
-﻿using CoachLife.Domain.Configuration;
-using CoachLife.Infra.Context;
+﻿using CoachLife.Infra.Context;
 using CoachLife.Infra.Extensions;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,10 +14,6 @@ builder.Services.AddApplicationServices();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<LifeCoachContext>(x => x.UseSqlServer(connectionString));
-
-var awsConfiguration = new AwsConfiguration();
-builder.Configuration.Bind("AWS", awsConfiguration);
-builder.Services.AddSingleton(awsConfiguration);
 
 var app = builder.Build();
 

@@ -40,14 +40,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "AWSSDK.CognitoIdentityProvider": {
-              "target": "Package",
-              "version": "[3.7.101.126, )"
-            },
-            "Amazon.Extensions.CognitoAuthentication": {
-              "target": "Package",
-              "version": "[2.4.0, )"
-            },
             "FluentAssertions": {
               "target": "Package",
               "version": "[6.11.0, )"
@@ -59,14 +51,6 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.0, )"
-            },
-            "Microsoft.AspNet.Mvc": {
-              "target": "Package",
-              "version": "[5.2.9, )"
-            },
-            "Microsoft.AspNet.WebApi.Core": {
-              "target": "Package",
-              "version": "[5.2.9, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -87,14 +71,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.5, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[6.0.13, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
